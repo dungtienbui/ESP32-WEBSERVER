@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Esp32-S3 Webserver</title>
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <img src="./iot.svg" alt="Logo" class="logo">
+        <div>
+            <a href="./">Home</a>
+            <a href="#">Control Device</a>
+            <a href="./set_relay.html">Set Relay</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <h2>Control Device Area</h2>
+
+        <div id="relay_control_area">
+            %TOGGLES%
+            <!-- <div class="control_relay_block">
+                <div class="relay_name">
+                    <div>Lighter</div>
+                    <div>Relay 1</div>
+                </div>
+                <div class="state"><span>State of device: </span><span>OFF</span></div>
+                <button>ToggLe</button>
+            </div>
+            <div class="control_relay_block">
+                <div class="relay_name">
+                    <div>Lighter</div>
+                    <div>Relay 1</div>
+                </div>
+                <div class="state"><span>State of device: </span><span>OFF</span></div>
+                <button>ToggLe</button>
+            </div> -->
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="control_relay_WS.js"></script>
+</body>
+
+
+</html>

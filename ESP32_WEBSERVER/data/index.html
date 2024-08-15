@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Esp32-S3 Webserver</title>
+
+    <script type="text/javascript" src="monitor_SSE.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="./iot.svg" alt="Logo" class="logo">
+        <div>
+            <a href="#">Home</a>
+            <a href="./control_device.html">Control Device</a>
+            <a href="./set_relay.html">Set Relay</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Monitor</h2>
+        <div id="monitor_area">
+            <div class="weather_info_block">
+                <img class="weather_icon" src="./temperature.svg">
+                <div class="weather_text">
+                    <div class="weather_info_name">Temperature</div>
+                    <div id="temperature">
+                        <div class="weather_value">...</div>
+                        <!-- <div class="timestamp">00:00:00 00-00-0000</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="weather_info_block">
+                <img class="weather_icon" src="./humidity.svg">
+                <div class="weather_text">
+                    <div class="weather_info_name">Humidity</div>
+                    <div id="humidity">
+                        <div class="weather_value">...</div>
+                        <!-- <div class="timestamp">00:00:00 00-00-0000</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="weather_info_block">
+                <img class="weather_icon" src="./light.svg">
+                <div class="weather_text">
+                    <div class="weather_info_name">Light</div>
+                    <div id="light">
+                        <div class="weather_value">...</div>
+                        <!-- <div class="timestamp">00:00:00 00-00-0000</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="weather_info_block">
+                <img class="weather_icon" src="./soil-moisture.svg">
+                <div class="weather_text">
+                    <div class="weather_info_name">Soil moisture</div>
+                    <div id="moisture">
+                        <div class="weather_value">...</div>
+                        <!-- <div class="timestamp">00:00:00 00-00-0000</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

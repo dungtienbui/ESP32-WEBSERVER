@@ -1,0 +1,378 @@
+:root {
+  --sideNav-width: 15rem;
+  --header-height: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+
+.logo {
+  display: block;
+  width: 50%;
+  margin: 1rem auto 2rem auto;
+  border-bottom: 1px solid #ccc;
+}
+
+/* side bar */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 0;
+}
+
+/* heading */
+.content h2 {
+  text-align: center;
+  color: #333;
+  
+  margin: 2rem 0;
+  padding: 0;
+}
+
+
+/* Reponsive for side bar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+  .logo {
+    width: 40px;
+    margin: 5px;
+    margin-left: 15px;
+    border: none;
+    float: left;
+
+    border-bottom: none;
+
+    border-right: 1px solid #777;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .sidebar {
+    display: flex;
+  }
+
+  .sidebar div {
+    width: 50%;
+  }
+
+  .sidebar a {
+    text-align: center;
+    float: none;
+    margin: 0;
+  }
+
+  .logo {
+    display: block;
+    width: 100px;
+    margin: auto;
+    border-right: 1px solid #777;
+  }
+}
+
+/* control relay area */
+#relay_control_area {
+  padding: 0 2rem;
+}
+
+
+.control_relay_block {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0 auto 2rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control_relay_block {
+  padding: 0.5rem 1rem;
+}
+
+.control_relay_block .relay_name div:first-of-type {
+  font-size: 1.8rem;
+}
+
+.control_relay_block .relay_name div:last-of-type {
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-left: 1rem;
+}
+
+.control_relay_block .state {
+  font-size: 1.3rem;
+}
+
+.control_relay_block .state span:last-of-type {
+  font-size: 1.5rem;
+}
+
+.control_relay_block button {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+
+.control_relay_block button:active {
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px black;
+}
+
+@media screen and (max-width: 900px) {
+  .control_relay_block {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  #relay_control_area {
+    padding: 0;
+  }
+  
+  .control_relay_block button {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  .control_relay_block .relay_name div:first-of-type {
+    font-size: 1.5rem;
+  }
+  
+  .control_relay_block .relay_name div:last-of-type {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
+  
+  .control_relay_block .state {
+    font-size: 1.1rem;
+  }
+  
+  .control_relay_block .state span:last-of-type {  
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .control_relay_block {
+    width: 95%;
+
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .control_relay_block .state span:first-of-type {
+    display: none;
+  }
+
+  .control_relay_block {
+    margin-bottom: 1rem;
+  }
+}
+
+/* control monitor area */
+
+#monitor_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.weather_info_block {
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+  margin: 0;
+
+  background-color: rgba(219, 228, 236, 0.164);
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #f1f1f1;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather_text {
+  text-align: right;
+}
+
+.weather_info_name {
+  font-size: 2rem;
+  text-decoration: underline;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+.weather_value {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.timestamp {
+  font-size: 1.5rem;
+}
+
+
+.weather_icon {
+  width: 100px;
+  margin: 1rem;
+  padding: 0;
+}
+
+
+.form_relay {
+  max-width: 45%;
+  margin: 2rem auto 3rem auto;
+  border: 1px solid black;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+
+.form_relay div {
+  display: block;
+  margin: 1rem auto;
+}
+
+.form_relay div label {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.form_relay div input, .form_relay div select {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.form_relay button {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  
+  #monitor_area {
+    display: block;
+    padding: 1rem;
+    
+  }
+
+  .weather_info_block {
+    margin-bottom: 1.5rem;
+  }
+
+
+  .form_relay {
+    max-width: 65%;
+  }
+
+}
+
+
+@media screen and (max-width: 550px) {
+  .weather_info_block {
+    padding: 0.3rem;
+  }
+
+  .weather_info_name {
+    font-size: 1.3rem;
+  }
+  
+  .weather_value {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timestamp {
+    font-size: 1.2rem;
+  }
+
+
+  .form_relay {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .weather_info_block {
+    padding: 0.5rem 1rem;
+  }
+
+  .timestamp {
+    font-size: 1.1rem;
+  }
+
+  .form_relay {
+    max-width: 85%;
+  }
+
+}
+
+
+@media screen and (max-width: 450px) {
+  .content h2 {
+    margin: 1rem 0;
+  }
+}
+
+
+
+
